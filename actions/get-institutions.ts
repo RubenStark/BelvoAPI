@@ -2,7 +2,7 @@ import { BASE_URL } from "@/utils";
 
 export default async function getInstitutions() {
     try {
-        const response = await fetch(`${BASE_URL}/api/institutions/?page=1`, {
+        const response = await fetch(`${BASE_URL}/api/institutions/`, {
             method: "GET",
             headers: {
                 "Authorization": "Basic OTUxNDZmNzEtYTc2Zi00MDNjLWJjODMtNmNhZDFjNGIyMzJlOmVBQk9tLVRyIzU0TmRpR1JPRFcjZ2ZrcHVubVlAM1RITUtGUDRhS08xcnk3YW8xTGpoVGxTbjRAQndqMHA1WEQ="

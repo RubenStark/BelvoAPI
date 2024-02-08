@@ -12,10 +12,10 @@ export default function InstitutionList({ institution }: {
 }) {
 
     return (
-        <Link href={`/${institution.id}`} className="w-full flex justify-center">
-            <Card 
-            isPressable
-            className="w-11/12 mt-2">
+        <Link href={`/${institution.name}`} className="w-full flex justify-center">
+            <Card
+                isPressable
+                className="w-11/12 mt-2">
                 <CardHeader className="justify-between">
                     <div className="flex gap-5">
                         <Avatar size="md" src={institution.logo} isBordered style={{ "background": institution.primary_color }} />
@@ -28,7 +28,6 @@ export default function InstitutionList({ institution }: {
                             </h5>
                         </div>
                     </div>
-
                 </CardHeader>
                 <CardBody className="px-3 py-0 text-small text-default-400">
                     <p>
