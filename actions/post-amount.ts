@@ -1,3 +1,5 @@
+import toast from "react-hot-toast";
+
 export default async function PostAmount({ amount, currency, bank }: { amount: number, currency: string, bank: string }) {
     try {
 
@@ -22,6 +24,8 @@ export default async function PostAmount({ amount, currency, bank }: { amount: n
         const data = await response.json();
 
         console.log('Amount saved:', data);
+
+        toast.success('Amount saved');
 
         if (!data) {
             throw new Error('Invalid data received');
