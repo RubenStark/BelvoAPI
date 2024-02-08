@@ -52,7 +52,8 @@ function Transaction({ transaction }: {
                 <div className="w-full mx-5h-full">
                     <p className={cn("text-small font-semibold", transaction.type === 'INFLOW' ? 'text-green-500' : 'text-red-500')}
                     >{transaction.type}</p>
-                    <p className="text-default-600 text-small">{transaction.account.institution.name}</p>
+                    {/* <p className="text-default-600 text-small">{transaction.account.institution.name}</p> */}
+                    <p className="text-default-600 text-small">{transaction.currency}</p>
                 </div>
                 <p className="font-semibold">${transaction.amount}</p>
             </div>
