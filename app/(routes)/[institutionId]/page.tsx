@@ -1,8 +1,9 @@
-import { Card, Divider } from "@nextui-org/react";
+import { Button, Card, Divider } from "@nextui-org/react";
 import { Account, Institution, TransactionRequest } from "@/types";
 import getTransactions from "@/actions/get-transactions";
 import { cn } from "@/lib/tw-merge";
 import { getKPI } from "@/utils";
+import SaveAmount from "@/components/save-amount";
 
 async function Institution({ params }: { params: { institutionId: string } }) {
 
@@ -23,6 +24,7 @@ async function Institution({ params }: { params: { institutionId: string } }) {
                     <p>KPI</p>
                 </div>
             </div>
+            <SaveAmount amount={KPI} bank={params.institutionId} currency="MXN" />
             <p className="font-medium m-5">Transactions</p>
 
             {
